@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Getting Started: Serving Web Content</title>
+</head>
+
+<body>
+
+
+<form id="loginForm" action="loginProcess" method="post">
+
+Enter SSO ID : <input type="text" name="ssoId" />
+
+<p th:text="'redirectUri = ' + ${redirectUri} " />
+<a href="main.html" th:href="@{/main}"> test link</a>
+
+<input type="hidden" name="redirectUri" th:attr="value=${redirectUri}" />
+
+<input type="submit" name="submit" />
+</form>
+
+
+</body>
+</html>
+
